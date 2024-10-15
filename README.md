@@ -1,3 +1,17 @@
+# Introdução ao Minicurso de Flask como Back-End em Python
+
+## Bem-vindos ao minicurso de Flask como back-end em Python! Neste curso, vamos explorar o desenvolvimento de uma API utilizando Flask, um framework leve e eficiente, enquanto trabalhamos desde o início com Docker para garantir a portabilidade e consistência do nosso ambiente de desenvolvimento.
+
+## Nosso foco será em:
+
+- ### Configuração do Ambiente: Começaremos criando um ambiente Docker para o PostgreSQL, que será o banco de dados da nossa aplicação.
+- ### Fundamentos do Flask: Aprenderemos sobre rotas, métodos HTTP e o gerenciamento de requisições, fundamentais para construir uma API RESTful.
+- ### Integração com PostgreSQL: Vamos conectar nossa aplicação Flask ao banco de dados, criando tabelas e manipulando dados de forma simples.
+
+- ### Implantação no Docker: Por fim, vamos subir nossa aplicação Flask também em um contêiner Docker, garantindo que ela seja facilmente implementável em qualquer servidor.
+
+
+## Ao final do minicurso, você terá uma base sólida sobre o desenvolvimento de APIs com Flask, integrando com PostgreSQL e utilizando Docker como parte do seu fluxo de trabalho. Vamos juntos construir um ambiente prático e aplicável no mercado!
 
 # Minicurso: Configurando o Ambiente Python com `venv` (Linux/MacOS)
 
