@@ -80,7 +80,10 @@ deactivate
 
 ---
 
-Pronto! Agora você tem um ambiente virtual configurado e está pronto para começar a desenvolver a API Flask no seu minicurso.
+## Exportando Dependências
 
+Se você instalou mais dependências e deseja exportá-las, utilize o seguinte comando:
 
-pip freeze > requirements.txt
+```bash
+pip freeze > dependencies.txt
+```
