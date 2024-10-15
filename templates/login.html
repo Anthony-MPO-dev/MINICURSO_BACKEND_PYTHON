@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="flex-container">
+    <h1>Login</h1>
+    <!-- Formulário de Login -->
+    <form method="POST" class="login-form">
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <button type="submit">Entrar</button>
+    </form>
+    <br>
+    <div>
+        <a href="{{ url_for('register') }}">Registrar</a>
+    </div>
+</div>
+{% endblock %}

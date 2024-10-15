@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Meu Aplicativo{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    {% block script %}
+    {% endblock %}
+</head>
+<body class="">
+    {% block header %}
+    <header class="header">
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="">Login</a>
+            <a href="">Registrar</a>
+            {% if session.username %}
+                <a href="">Dashboard</a>
+
+                <form action="" method="post" style="display:inline;">
+                    <button type="submit" style="background:none;border:none;color:white;cursor:pointer;">Logout</button>
+                </form>
+            {% endif %}
+        </nav>
+    </header>
+    {% endblock %}
+
+    {% block container %}
+    <div class="container mt-4">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <script>
+                    alert("{{ messages[0] }}");
+                </script>
+            {% endif %}
+        {% endwith %}
+        <!-- Conteúdo principal -->
+        <main>
+            {% block content %}
+            
+            {% endblock %}
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Anthony Muniz Prado de Oliveira</p>
+    </footer>
+    {% endblock %}
+</body>
+</html>

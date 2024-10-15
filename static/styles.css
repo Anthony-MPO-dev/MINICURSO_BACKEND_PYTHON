@@ -1,0 +1,213 @@
+/* Estilo do body e layout geral */
+body {
+    background-color: #ffffff;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    font-size: 1.7vw;
+}
+
+body.body-dashboard {
+    display: grid;
+    grid-template-areas: 
+        "header container" /* Define o layout em uma linha */
+        "header container"; /* Define o footer em uma linha abaixo */
+    grid-template-columns: 13% 1fr; /* Coluna do header e do dashboard */
+    grid-template-rows: auto auto; /* Altura do header e do footer */
+}
+
+header {
+    overflow: hidden;
+    grid-area: header;
+    background-color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza verticalmente os itens */
+    height: 10vh; /* Ajustado para 10vh */
+    padding: 0 20px; /* Adiciona espaçamento lateral, se necessário */
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+header button {
+    position: absolute; /* Coloca o botão fora do fluxo do flexbox */
+    right: 20px; /* Ajusta a posição do botão à esquerda */
+    background-color: rgb(167, 5, 5); /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto */
+    border: none; /* Sem borda */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, transform 0.2s ease; /* Transição suave */
+}
+
+header button:hover {
+    background-color: #ffffff; /* Cor do botão ao passar o mouse */
+    color: #ff0000;
+}
+
+header button:active {
+    background-color: #ffffff; /* Cor do botão ao clicar */
+    color: black; /* Cor do texto ao clicar */
+    transform: scale(0.95); /* Leve redução do tamanho ao clicar */
+}
+
+
+/* Estilos para o header do dashboard */
+header.dashboard-header {
+    padding: 0px;
+    padding-top: 20px;
+    background-color: #333;
+    box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Alinha os itens em coluna */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    justify-content: flex-start;
+    height: 100vh; /* Altura total da tela */
+    width: 13%;
+    position: fixed; /* Fixa o header na esquerda */
+    z-index: 1000; /* Para garantir que fique acima de outros conteúdos */
+}
+
+/* Estilo para a navegação do dashboard */
+header.dashboard-header nav {
+    display: flex;
+    flex-direction: column; /* Alinha os itens do menu em coluna */
+    width: 100%; /* Ocupar toda a largura do header */
+}
+
+header.dashboard-header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px; /* Espaçamento entre os itens do menu */
+}
+
+header.dashboard-header nav a:hover {
+    text-decoration: underline; /* Efeito ao passar o mouse */
+}
+
+header.dashboard-header button {
+    position: absolute; /* Coloca o botão fora do fluxo do flexbox */
+    bottom: 5vw; /* Ajusta a posição do botão à esquerda */
+    left: 1.5vh;
+}
+
+header.dashboard-header button:hover {
+    background-color: #ffffff; /* Cor do botão ao passar o mouse */
+}
+
+header.dashboard-header button:active {
+    background-color: #ffffff; /* Cor do botão ao clicar */
+    color: black; /* Cor do texto ao clicar */
+    transform: scale(0.95); /* Leve redução do tamanho ao clicar */
+}
+
+
+
+
+/* Espaçamento do container principal */
+.container {
+    padding: 20px;
+    height: 90vh; /* Altura do container principal */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+}
+
+.container-dashboard {
+    grid-area: container;
+    padding: 0px;
+    width: 100%;
+    height: 100vh; /* Altura do container principal */
+    display: flex;
+    justify-self: right;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+}
+
+/* Estilo do contêiner flexível */
+.container .flex-container {
+    display: flex;
+    flex-direction: column; /* Alinha os filhos em coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza o texto dentro do contêiner */
+    width: 100%; /* Largura total do contêiner */
+}
+
+/* Estilo do formulário de login */
+.container .login-form {
+    display: flex;
+    flex-direction: column; /* Alinha os campos do formulário em coluna */
+    align-items: center; /* Centraliza os campos do formulário */
+}
+
+.container .register-form {
+    display: flex;
+    color:white;
+    flex-direction: column; /* Alinha os campos do formulário em coluna */
+    align-items: center; /* Centraliza os campos do formulário */
+    background: linear-gradient(135deg, #6b6969, #4e4e4e); /* Gradiente de fundo */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    padding: 20px; /* Espaçamento interno */
+    max-width: 40vw; /* Largura máxima do formulário */
+    margin: 20px auto; /* Centraliza o formulário na página */
+}
+
+
+/* Estilos adicionais para campos e botões */
+.container input[type="text"], .container input[type="password"], .container input[type="email"], .container button {
+    border-radius: 15px;
+    font-size: 1.7vw;;
+    margin: 10px 0; /* Espaçamento entre os campos */
+    padding: 10px; /* Espaçamento interno */
+    min-width: 15vw;
+    max-width: 25vw; /* Largura fixa dos campos */
+}
+
+/* Estilo dos botões */
+.container button {
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    background-color: #3a3838; /* Cor do botão padrão */
+    color: #f1f1f1;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, transform 0.2s ease; /* Transição suave */
+}
+
+button:hover {
+    background-color: #6b6969; /* Cor do botão ao passar o mouse */
+}
+
+button:active {
+    background-color: #ffffff; /* Cor do botão ao clicar */
+    color: black;
+    transform: scale(0.95); /* Reduz o botão levemente */
+}
+
+/* Estilo do footer */
+footer.footer {
+    grid-area: footer;
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px 0;
+    background-color: #f1f1f1;
+    color: #333;
+    font-size: 14px;
+}
