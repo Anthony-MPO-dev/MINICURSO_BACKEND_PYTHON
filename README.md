@@ -33,6 +33,20 @@ Este guia ensina como configurar um ambiente virtual para Python usando o módul
     pip --version
     ```
 
+  - Instalação pip:
+    ```bash
+    curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+
+    python get-pip.py
+
+    #faça a verificação se foi instalado
+    pip --version
+
+    ```
+
+    
+
+
 ## Passos para Configurar o Ambiente
 
 ### 1. Criar uma Pasta para o Projeto
