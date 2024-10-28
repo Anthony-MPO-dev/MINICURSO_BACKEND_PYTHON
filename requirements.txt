@@ -1,0 +1,17 @@
+blinker==1.8.2
+click==8.1.7
+Flask  # Versão anterior ao Flask 3.0
+Flask-Login
+Flask-Migrate
+Flask-SQLAlchemy==3.1.1
+greenlet==3.1.1
+itsdangerous==2.2.0
+Jinja2==3.1.4
+MarkupSafe==3.0.1
+SQLAlchemy==2.0.35
+psycopg2==2.9.3
+typing_extensions==4.12.2
+Werkzeug # Ou versão compatível com Flask 2.0.3
+dash>=2.0.0
+pandas
+

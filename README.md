@@ -1,3 +1,4 @@
+
 # Introdução ao Minicurso de Flask como Back-End em Python
 
 ## Bem-vindos ao minicurso de Flask como back-end em Python! Neste curso, vamos explorar o desenvolvimento de uma API utilizando Flask, um framework leve e eficiente, enquanto trabalhamos desde o início com Docker para garantir a portabilidade e consistência do nosso ambiente de desenvolvimento.
@@ -32,20 +33,6 @@ Este guia ensina como configurar um ambiente virtual para Python usando o módul
     ```bash
     pip --version
     ```
-
-  - Instalação pip:
-    ```bash
-    curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-
-    python get-pip.py
-
-    #faça a verificação se foi instalado
-    pip --version
-
-    ```
-
-    
-
 
 ## Passos para Configurar o Ambiente
 
@@ -87,7 +74,7 @@ pip install -r dependencies.txt
 ```
 
 
-### 5. Desativar o Ambiente Virtual
+### Para Desativar o Ambiente Virtual
 
 Quando terminar de trabalhar, você pode desativar o ambiente virtual com o comando:
 
@@ -108,10 +95,7 @@ deactivate
 
 ---
 
-## Exportando Dependências
+Pronto! Agora você tem um ambiente virtual configurado e está pronto para começar a desenvolver a API Flask no seu minicurso.
 
-Se você instalou mais dependências e deseja exportá-las, utilize o seguinte comando:
 
-```bash
-pip freeze > dependencies.txt
-```
+pip freeze > requirements.txt
